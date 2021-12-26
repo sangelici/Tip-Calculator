@@ -1,47 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href="index.css" />
-  <script type="module" src="index.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
 
-  Bill
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <script type="module" src="index.js"></script>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
 
-  Number of People
+    <div class="content-wrapper">
+      <div class="title-container">
+        <h1 class="app-title">Splitter</h1>
+      </div>
 
-  Tip Amount
-  / person
+      <div class="container-fluid px-4 main-container d-flex flex-column">
+        <div class="row p-4">
+          <div class="col-6 pl-0 left-container">
+            <p><small>Bill</small></p>
+            <div class="input-container mb-3">
+              <img
+                class="dollar-icon"
+                src="../images/icon-dollar.svg"
+                alt="dollar symbol"
+              />
+              <input type="number" class="form-control" placeholder="0" />
+            </div>
 
-  Total
-  / person
+            <p><small>Select Tip %</small></p>
+            <div class="percentage-options-container">
+              <div class="row mx-0">
+                <div class="col-4 px-1">
+                  <button type="button" class="btn btn-default btn-block">
+                    5%
+                  </button>
+                </div>
+                <div class="col-4 px-1">
+                  <button type="button" class="btn btn-default btn-block">
+                    10%
+                  </button>
+                </div>
+                <div class="col-4 px-1">
+                  <button type="button" class="btn btn-default btn-block">
+                    15%
+                  </button>
+                </div>
+              </div>
+              <div class="row mx-0 mt-2">
+                <div class="col-4 px-1">
+                  <button type="button" class="btn btn-default btn-block">
+                    18%
+                  </button>
+                </div>
+                <div class="col-4 px-1">
+                  <button type="button" class="btn btn-default btn-block">
+                    20%
+                  </button>
+                </div>
+                <div class="col-4 px-1">
+                  <button type="button" class="btn btn-default btn-block">
+                    Custom
+                  </button>
+                </div>
+              </div>
+            </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Sarah Angelici</a>.
-  </div>
-</body>
+            <p><small>Number of People</small></p>
+            <div class="input-container mb-3">
+              <img
+                class="person-icon"
+                src="../images/icon-person.svg"
+                alt="dollar symbol"
+              />
+              <input type="number" class="form-control" placeholder="0" />
+            </div>
+          </div>
+
+          <div class="col-6 results-container">
+            <div class="row mt-3">
+              <div class="col-6">
+                <p>Tip Amount</p>
+                <p class="per-person">/person</p>
+              </div>
+              <div class="col-6 pr-4 generated-amt">
+                <h1>$0.00</h1>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-6">
+                <p>Total</p>
+                <p class="per-person">/person</p>
+              </div>
+              <div class="col-6 pr-4 generated-amt">
+                <h1>$0.00</h1>
+              </div>
+            </div>
+            <div class="row reset-wrapper">
+              <div class="col">
+                <button type="button" class="btn w-100">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CREDITS -->
+        <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Sarah Angelici</a>.
+      </div> -->
+      </div>
+    </div>
+  </body>
 </html>
