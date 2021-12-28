@@ -460,6 +460,13 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"hD4hw":[function(require,module,exports) {
 var _bootstrap = require("bootstrap");
+"use strict";
+$(()=>{
+    $("billAmount").on("input");
+});
+function handleBillAmount(amt) {
+    console.log("input value: ", amt);
+}
 
 },{"bootstrap":"8lJf7"}],"8lJf7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
