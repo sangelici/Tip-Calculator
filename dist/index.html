@@ -15,13 +15,11 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <!-- Optional JavaScript -->
-    <script src="/index.379dd93c.js" defer=""></script>
-
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/index.017db2f2.js"></script>
 
     <div class="content-wrapper">
       <div class="title-container">
@@ -34,41 +32,41 @@
             <p><small>Bill</small></p>
             <div class="input-container mb-3">
               <img class="dollar-icon" src="/icon-dollar.7624dffe.svg" alt="dollar symbol">
-              <input type="number" class="form-control" placeholder="0">
+              <input id="billAmount" type="number" class="form-control" placeholder="0" value="">
             </div>
 
             <p><small>Select Tip %</small></p>
             <div class="percentage-options-container">
-              <div class="row mx-0">
+              <div class="row mx-0 tip-percent">
                 <div class="col-4 px-1">
-                  <button type="button" class="btn btn-default btn-block">
+                  <button id="5percent" type="button" class="btn btn-default btn-block">
                     5%
                   </button>
                 </div>
                 <div class="col-4 px-1">
-                  <button type="button" class="btn btn-default btn-block">
+                  <button id="10percent" type="button" class="btn btn-default btn-block">
                     10%
                   </button>
                 </div>
                 <div class="col-4 px-1">
-                  <button type="button" class="btn btn-default btn-block">
+                  <button id="15percent" type="button" class="btn btn-default btn-block">
                     15%
                   </button>
                 </div>
               </div>
-              <div class="row mx-0 mt-2">
+              <div class="row mx-0 mt-2 tip-percent">
                 <div class="col-4 px-1">
-                  <button type="button" class="btn btn-default btn-block">
+                  <button id="18percent" type="button" class="btn btn-default btn-block">
                     18%
                   </button>
                 </div>
                 <div class="col-4 px-1">
-                  <button type="button" class="btn btn-default btn-block">
+                  <button id="20percent" type="button" class="btn btn-default btn-block">
                     20%
                   </button>
                 </div>
                 <div class="col-4 px-1">
-                  <button type="button" class="btn btn-default btn-block">
+                  <button id="customPercent" type="button" class="btn btn-default btn-block">
                     Custom
                   </button>
                 </div>
@@ -78,7 +76,7 @@
             <p><small>Number of People</small></p>
             <div class="input-container mb-3">
               <img class="person-icon" src="/icon-person.5d0f345c.svg" alt="dollar symbol">
-              <input type="number" class="form-control" placeholder="0">
+              <input id="numOfPeople" type="number" class="form-control" placeholder="0" value="">
             </div>
           </div>
 
@@ -86,24 +84,26 @@
             <div class="row mt-3">
               <div class="col-6">
                 <p>Tip Amount</p>
-                <p class="per-person">/person</p>
+                <p class="per-person">per person</p>
               </div>
               <div class="col-6 pr-4 generated-amt">
-                <h1>$0.00</h1>
+                <h1 id="final-tip-total">$0.00</h1>
               </div>
             </div>
             <div class="row mt-4">
               <div class="col-6">
-                <p>Total</p>
-                <p class="per-person">/person</p>
+                <p>Total Cost</p>
+                <p class="per-person">per person</p>
               </div>
               <div class="col-6 pr-4 generated-amt">
-                <h1>$0.00</h1>
+                <h1 id="final-cost-total">$0.00</h1>
               </div>
             </div>
             <div class="row reset-wrapper">
               <div class="col">
-                <button type="button" class="btn w-100">Reset</button>
+                <button id="submit-btn" type="button" class="btn w-100">
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
