@@ -29,13 +29,13 @@ $(function () {
       tipPercentage !== 0 && tipPercentage !== undefined;
 
     if (billNotNil && numOfPeopleNotNil && tipPercentageNotNil) {
-      let x = bill * tipPercentage;
-      let y = (bill / numOfPeople).toFixed(2);
+      let calculateSplitTipAmt = bill * tipPercentage;
+      let calculateBillSplitAmt = (bill / numOfPeople).toFixed(2);
 
-      tipTotal = (x / numOfPeople).toFixed(2);
+      tipTotal = (calculateSplitTipAmt / numOfPeople).toFixed(2);
 
       $("#final-tip-total").text("$" + tipTotal);
-      $("#final-cost-total").text("$" + y);
+      $("#final-cost-total").text("$" + calculateBillSplitAmt);
       $("#submit-btn").text("Reset");
     }
   }
@@ -54,7 +54,6 @@ $(function () {
   $("#billAmount").on("input", updateBillAmount);
   $("#numOfPeople").on("input", updateNumOfPeople);
   $(".tip-percent").on("click", "button", handleTipPercentage);
-  console.log($("#submit-btn").text().trim() === "Calculate");
   $("#submit-btn").on("click", () => {
     $("#submit-btn").text().trim() === "Calculate"
       ? calculateTotals()
