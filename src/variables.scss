@@ -1,0 +1,65 @@
+// primary styles
+$primary-font-family: "Space Mono", monospace;
+
+$celeste: rgba(160, 247, 235, 0.8);
+$cultured-white: rgba(252, 252, 252, 1);
+$keppel: rgba(38, 192, 171, 1);
+$light-cyan: rgba(216, 242, 247, 1);
+$mint-cream: rgba(241, 250, 250, 0.9);
+$powdered-blue: rgba(197, 228, 231, 1);
+$pewter-blue: rgba(127, 156, 159, 1);
+$rich-black: rgba(5, 5, 5, 1);
+$steel-teal: rgba(94, 122, 125, 1);
+$warm-evergreen: rgba(0, 73, 77, 1);
+
+$html-background: $light-cyan;
+
+// Header styles
+$headerOne-font-color: $rich-black;
+$headerOne-font-size: 40px;
+$headerOne-font-weight: 600;
+$headerOne-font-family: $primary-font-family;
+
+$headerTwo-font-size: 22px;
+$headerTwo-font-weight: 600;
+$headerTwo-font-family: $primary-font-family;
+$headerTwo-text-transform: uppercase;
+
+$headerThree-font-size: 18px;
+$headerThree-font-weight: 500;
+$headerThree-font-family: $primary-font-family;
+$headerThree-text-transform: uppercase;
+
+$contentOne-font-size: 16px;
+$contentOne-font-weight: 700;
+$contentOne-font-family: $primary-font-family;
+
+$contentTwo-font-size: 12px;
+$contentTwo-font-weight: 400;
+$contentTwo-font-family: $primary-font-family;
+
+$subHeader-font-size: 10px;
+$subHeader-font-weight: 400;
+$subHeader-font-family: $primary-font-family;
+
+// Input Styles
+$input-primary-bg-color: $mint-cream;
+$input-text-color: $pewter-blue;
+$input-font-family: $headerTwo-font-family;
+$input-font-size: $contentOne-font-size;
+$input-font-weight: $contentOne-font-weight;
+
+// Button Styles
+$btn-primary-bg-color: $warm-evergreen;
+$btn-primary-font-family: $headerTwo-font-family;
+$btn-primary-font-size: $headerThree-font-size;
+$btn-primary-font-weight: $headerThree-font-weight;
+$btn-primary-text-color: $cultured-white;
+$btn-primary-text-transform: capitalize;
+
+$btn-secondary-bg-color: $celeste;
+$btn-secondary-font-family: $contentOne-font-family;
+$btn-secondary-font-size: $contentOne-font-size;
+$btn-secondary-font-weight: $contentOne-font-weight;
+$btn-secondary-text-color: $warm-evergreen;
+$btn-secondary-text-transform: uppercase;

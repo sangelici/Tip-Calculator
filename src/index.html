@@ -23,7 +23,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="stylesheet" type="text/css" href="./index.scss" />
 
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
@@ -48,14 +48,15 @@
 
     <div class="content-wrapper">
       <div class="title-container">
-        <h1 class="app-title">Splitter</h1>
+        <h1 class="app-title">Spli</h1>
+        <h1 class="app-title">tter</h1>
       </div>
 
       <div class="container-fluid px-4 main-container d-flex flex-column">
         <div class="row p-4">
           <div class="col-6 pl-0 left-container">
-            <p><small>Bill</small></p>
-            <div class="input-container mb-3">
+            <p class="left-header section-header">Bill</p>
+            <div class="input-container mb-4">
               <img
                 class="dollar-icon"
                 src="../images/icon-dollar.svg"
@@ -70,14 +71,14 @@
               />
             </div>
 
-            <p><small>Select Tip %</small></p>
+            <p class="left-header section-header mb-3">Select Tip %</p>
             <div class="percentage-options-container">
               <div class="row mx-0 tip-percent">
                 <div class="col-4 px-1">
                   <button
                     id="5percent"
                     type="button"
-                    class="btn btn-default btn-block"
+                    class="btn btn-default btn-block percent-amt"
                   >
                     5%
                   </button>
@@ -86,7 +87,7 @@
                   <button
                     id="10percent"
                     type="button"
-                    class="btn btn-default btn-block"
+                    class="btn btn-default btn-block percent-amt"
                   >
                     10%
                   </button>
@@ -95,7 +96,7 @@
                   <button
                     id="15percent"
                     type="button"
-                    class="btn btn-default btn-block"
+                    class="btn btn-default btn-block percent-amt"
                   >
                     15%
                   </button>
@@ -106,7 +107,7 @@
                   <button
                     id="18percent"
                     type="button"
-                    class="btn btn-default btn-block"
+                    class="btn btn-default btn-block percent-amt"
                   >
                     18%
                   </button>
@@ -115,7 +116,7 @@
                   <button
                     id="20percent"
                     type="button"
-                    class="btn btn-default btn-block"
+                    class="btn btn-default btn-block percent-amt"
                   >
                     20%
                   </button>
@@ -124,7 +125,7 @@
                   <button
                     id="customPercent"
                     type="button"
-                    class="btn btn-default btn-block"
+                    class="btn btn-default btn-block percent-amt custom"
                   >
                     Custom
                   </button>
@@ -132,7 +133,7 @@
               </div>
             </div>
 
-            <p><small>Number of People</small></p>
+            <p class="left-header section-header">Number of People</p>
             <div class="input-container mb-3">
               <img
                 class="person-icon"
@@ -152,25 +153,29 @@
           <div class="col-6 results-container">
             <div class="row mt-3">
               <div class="col-6">
-                <p>Tip Amount</p>
-                <p class="per-person">per person</p>
+                <p class="right-header section-header mt-2">Tip Amount</p>
+                <p class="sub-header">per person</p>
               </div>
               <div class="col-6 generated-amt">
-                <h1 id="final-tip-total">$0.00</h1>
+                <h1 id="final-tip-total" class="totals">$0.00</h1>
               </div>
             </div>
             <div class="row mt-4">
               <div class="col-6">
-                <p>Total Cost excl. Tip</p>
-                <p class="per-person">per person</p>
+                <p class="right-header section-header mt-2">Total excl. Tip</p>
+                <p class="sub-header">per person</p>
               </div>
               <div class="col-6 generated-amt">
-                <h1 id="final-cost-total">$0.00</h1>
+                <h1 id="final-cost-total" class="totals">$0.00</h1>
               </div>
             </div>
             <div class="row reset-wrapper">
               <div class="col">
-                <button id="submit-btn" type="button" class="btn w-100">
+                <button
+                  id="submit-btn"
+                  type="button"
+                  class="btn w-100 result-btn"
+                >
                   Calculate
                 </button>
               </div>

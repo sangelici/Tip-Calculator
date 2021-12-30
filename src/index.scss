@@ -1,0 +1,174 @@
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+  background-color: $html-background;
+  height: 100%;
+}
+
+p {
+  margin: 5px 0;
+}
+
+input {
+  text-align: right;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.content-wrapper {
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+}
+
+.title-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 10px;
+  height: auto;
+  margin: 0 auto;
+  width: 25%;
+}
+
+.app-title {
+  color: $warm-evergreen;
+  font-family: $headerTwo-font-family;
+  font-size: $headerTwo-font-size;
+  font-weight: $headerTwo-font-weight;
+  text-transform: $headerTwo-text-transform;
+  margin: 0;
+}
+
+.main-container {
+  background-color: $cultured-white;
+  border-radius: 15px;
+  margin: 64px auto;
+  max-width: 100%;
+}
+
+.left-container {
+  padding-right: 32px;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: $input-text-color;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+}
+
+.form-control {
+  background-color: $input-primary-bg-color;
+  border: 1px solid $input-primary-bg-color;
+  color: $input-text-color;
+  font-family: $primary-font-family;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  line-height: 32px;
+  padding: 6px 18px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dollar-icon,
+.person-icon {
+  height: 14px;
+  position: fixed;
+  margin: 0 18px;
+  width: 10px;
+  z-index: 999;
+}
+
+.percentage-options-container {
+  margin: 0 -5px 25px;
+}
+
+.results-container {
+  background-color: $warm-evergreen;
+  border-radius: 10px;
+  padding: 20px 32px;
+  position: relative;
+}
+
+.left-header {
+  color: $rich-black;
+}
+
+.right-header {
+  color: $cultured-white;
+}
+
+.section-header {
+  font-family: $contentOne-font-family;
+  font-size: $contentTwo-font-size;
+  font-weight: $contentTwo-font-weight;
+}
+
+.generated-amt {
+  display: flex;
+  justify-content: right;
+
+  & .totals {
+    color: $keppel;
+    font-family: $headerOne-font-family;
+    font-size: $headerOne-font-size;
+    font-weight: $headerOne-font-weight;
+  }
+}
+
+.sub-header {
+  color: $pewter-blue;
+  font-family: $subHeader-font-family;
+  font-size: $subHeader-font-size;
+  font-weight: $subHeader-font-weight;
+}
+
+.reset-wrapper {
+  position: absolute;
+  bottom: 20px;
+  width: calc((100% - (32px * 2)) + 30px);
+}
+
+.btn {
+  height: 46px;
+  letter-spacing: 2px;
+}
+
+.percent-amt {
+  background-color: $btn-primary-bg-color;
+  color: $btn-primary-text-color;
+  font-family: $btn-primary-font-family;
+  font-size: $btn-primary-font-size;
+  font-weight: $btn-primary-font-weight;
+  text-transform: $btn-primary-text-transform;
+}
+
+.custom {
+  background-color: $mint-cream;
+  color: $warm-evergreen;
+  font-weight: $contentOne-font-weight;
+}
+
+.result-btn {
+  background-color: $btn-secondary-bg-color;
+  color: $btn-secondary-text-color;
+  font-family: $btn-secondary-font-family;
+  font-size: $btn-secondary-font-size;
+  font-weight: $btn-secondary-font-weight;
+  text-transform: $btn-secondary-text-transform;
+}

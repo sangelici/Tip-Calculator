@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css2?family=Space+Mono&display=swap";
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -14,12 +15,19 @@ p {
   margin: 5px 0;
 }
 
+p,
+h1,
+button,
+input {
+  font-family: "Space Mono", monospace;
+}
+
 input {
   text-align: right;
 }
 
 .content-wrapper {
-  height: 500px;
+  height: auto;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -29,18 +37,20 @@ input {
 
 .title-container {
   background-color: greenyellow;
-  display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  letter-spacing: 10px;
   height: auto;
   margin: 0 auto;
-  width: 200px;
+  width: 25%;
 }
 
 .app-title {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 36px;
-  font-weight: 400;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .main-container {
