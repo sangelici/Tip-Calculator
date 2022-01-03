@@ -70,13 +70,27 @@ input::-webkit-inner-spin-button {
 
 .form-control {
   background-color: $input-primary-bg-color;
-  border: 1px solid $input-primary-bg-color;
+  border: 3px solid $input-primary-bg-color;
   color: $input-text-color;
+  cursor: pointer;
   font-family: $primary-font-family;
   font-size: $input-font-size;
   font-weight: $input-font-weight;
   line-height: 32px;
   padding: 6px 18px;
+
+  &:hover {
+    background-color: $input-hover-bg-color;
+    border: 3px solid $input-hover-border-color;
+  }
+
+  &:focus {
+    background-color: $input-focus-bg-color;
+    color: $input-text-color;
+    outline-style: none;
+    box-shadow: none;
+    border: 3px solid $input-focus-border-color;
+  }
 }
 
 .input-container {
@@ -105,8 +119,17 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
-.left-header {
-  color: $rich-black;
+.section-title-wrapper {
+  display: flex;
+
+  .left-header {
+    color: $rich-black;
+  }
+
+  .error-message {
+    color: $primary-error-color;
+    margin-left: auto;
+  }
 }
 
 .right-header {
@@ -147,6 +170,11 @@ input::-webkit-inner-spin-button {
 .btn {
   height: 46px;
   letter-spacing: 2px;
+
+  &:focus {
+    outline-style: none;
+    box-shadow: none;
+  }
 }
 
 .percent-amt {
@@ -156,12 +184,61 @@ input::-webkit-inner-spin-button {
   font-size: $btn-primary-font-size;
   font-weight: $btn-primary-font-weight;
   text-transform: $btn-primary-text-transform;
+
+  &:hover {
+    background-color: $btn-primary-hover-bg-color;
+    color: $btn-primary-hover-text-color;
+  }
+
+  &:focus {
+    background-color: $btn-primary-focus-bg-color;
+    color: $btn-primary-focus-text-color;
+  }
 }
 
 .custom {
   background-color: $mint-cream;
+  border: 3px solid $input-primary-bg-color;
   color: $warm-evergreen;
-  font-weight: $contentOne-font-weight;
+  cursor: pointer;
+  font-family: $btn-primary-font-family;
+  font-size: $btn-primary-font-size;
+  font-weight: $btn-primary-font-weight;
+
+  &:focus {
+    border: 3px solid $input-focus-bg-color;
+  }
+}
+
+.custom-input {
+  background-color: $input-primary-bg-color;
+  // border: 3px solid $input-primary-bg-color;
+  color: $input-text-color;
+  cursor: pointer;
+  font-family: $btn-primary-font-family;
+  font-size: $btn-primary-font-size;
+  font-weight: $btn-primary-font-weight;
+  line-height: 32px;
+  padding: 6px 18px;
+  text-align: end;
+
+  &:hover {
+    background-color: $input-hover-bg-color;
+    border: 3px solid $input-hover-border-color;
+  }
+
+  &:focus {
+    background-color: $input-focus-bg-color;
+    color: $input-text-color;
+    outline-style: none;
+    box-shadow: none;
+    border: 3px solid $input-focus-border-color;
+  }
+}
+
+.selected {
+  background-color: $btn-primary-hover-bg-color;
+  color: $btn-primary-hover-text-color;
 }
 
 .result-btn {
@@ -171,4 +248,8 @@ input::-webkit-inner-spin-button {
   font-size: $btn-secondary-font-size;
   font-weight: $btn-secondary-font-weight;
   text-transform: $btn-secondary-text-transform;
+}
+
+.invalidValueError {
+  border: 3px solid $primary-error-color;
 }

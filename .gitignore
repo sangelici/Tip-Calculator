@@ -16,4 +16,5 @@
 .prettierignore
 .eslintrc.js
 .parcel-cache
+.cache
 node_modules

@@ -1,6 +1,8 @@
 // primary styles
 $primary-font-family: "Space Mono", monospace;
+$primary-error-color: rgba(223, 72, 55, 1);
 
+// Seafoam Palette
 $celeste: rgba(160, 247, 235, 0.8);
 $cultured-white: rgba(252, 252, 252, 1);
 $keppel: rgba(38, 192, 171, 1);
@@ -10,6 +12,7 @@ $powdered-blue: rgba(197, 228, 231, 1);
 $pewter-blue: rgba(127, 156, 159, 1);
 $rich-black: rgba(5, 5, 5, 1);
 $steel-teal: rgba(94, 122, 125, 1);
+$turquoise: rgba(153, 234, 223, 1);
 $warm-evergreen: rgba(0, 73, 77, 1);
 
 $html-background: $light-cyan;
@@ -26,7 +29,7 @@ $headerTwo-font-family: $primary-font-family;
 $headerTwo-text-transform: uppercase;
 
 $headerThree-font-size: 18px;
-$headerThree-font-weight: 500;
+$headerThree-font-weight: 600;
 $headerThree-font-family: $primary-font-family;
 $headerThree-text-transform: uppercase;
 
@@ -49,6 +52,12 @@ $input-font-family: $headerTwo-font-family;
 $input-font-size: $contentOne-font-size;
 $input-font-weight: $contentOne-font-weight;
 
+$input-hover-bg-color: $input-primary-bg-color;
+$input-hover-border-color: $turquoise;
+
+$input-focus-bg-color: $input-primary-bg-color;
+$input-focus-border-color: $turquoise;
+
 // Button Styles
 $btn-primary-bg-color: $warm-evergreen;
 $btn-primary-font-family: $headerTwo-font-family;
@@ -56,6 +65,12 @@ $btn-primary-font-size: $headerThree-font-size;
 $btn-primary-font-weight: $headerThree-font-weight;
 $btn-primary-text-color: $cultured-white;
 $btn-primary-text-transform: capitalize;
+
+$btn-primary-hover-bg-color: $turquoise;
+$btn-primary-hover-text-color: $warm-evergreen;
+
+$btn-primary-focus-bg-color: $turquoise;
+$btn-primary-focus-text-color: $warm-evergreen;
 
 $btn-secondary-bg-color: $celeste;
 $btn-secondary-font-family: $contentOne-font-family;
