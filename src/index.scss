@@ -187,6 +187,7 @@ input::-webkit-inner-spin-button {
 
   &:hover {
     background-color: $btn-primary-hover-bg-color;
+    border: 3px solid $btn-primary-hover-bg-color;
     color: $btn-primary-hover-text-color;
   }
 
@@ -204,6 +205,7 @@ input::-webkit-inner-spin-button {
   font-family: $btn-primary-font-family;
   font-size: $btn-primary-font-size;
   font-weight: $btn-primary-font-weight;
+  height: 46px;
 
   &:focus {
     border: 3px solid $input-focus-bg-color;
@@ -212,12 +214,13 @@ input::-webkit-inner-spin-button {
 
 .custom-input {
   background-color: $input-primary-bg-color;
-  // border: 3px solid $input-primary-bg-color;
+  border: 3px solid $input-primary-bg-color;
   color: $input-text-color;
   cursor: pointer;
   font-family: $btn-primary-font-family;
   font-size: $btn-primary-font-size;
   font-weight: $btn-primary-font-weight;
+  height: 46px;
   line-height: 32px;
   padding: 6px 18px;
   text-align: end;
@@ -238,6 +241,7 @@ input::-webkit-inner-spin-button {
 
 .selected {
   background-color: $btn-primary-hover-bg-color;
+  border: 3px solid $btn-primary-hover-bg-color;
   color: $btn-primary-hover-text-color;
 }
 

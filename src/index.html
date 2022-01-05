@@ -55,7 +55,13 @@
       <div class="container-fluid px-4 main-container d-flex flex-column">
         <div class="row p-4">
           <div class="col-6 pl-0 left-container">
-            <p class="left-header section-header">Bill</p>
+            <div class="section-title-wrapper">
+              <p class="left-header section-header">Bill</p>
+              <p id="bill-error" class="section-header error-message">
+                Can't be zero
+              </p>
+            </div>
+
             <div class="input-container mb-4">
               <img
                 class="dollar-icon"
@@ -71,7 +77,12 @@
               />
             </div>
 
-            <p class="left-header section-header mb-3">Select Tip %</p>
+            <div class="section-title-wrapper">
+              <p class="left-header section-header mb-3">Select Tip %</p>
+              <p id="tip-error" class="section-header error-message">
+                Can't be zero
+              </p>
+            </div>
             <div class="percentage-options-container">
               <div class="row mx-0 tip-percent">
                 <div class="col-4 px-1">
@@ -121,7 +132,7 @@
                     20%
                   </button>
                 </div>
-                <div class="col-4 px-1">
+                <div class="col-4 px-1 custom-tip">
                   <button
                     id="customPercent"
                     type="button"
@@ -130,10 +141,24 @@
                     Custom
                   </button>
                 </div>
+                <div class="col-4 px-1 custom-tip-input">
+                  <input
+                    id="customPercentInput"
+                    type="number"
+                    class="form-control percent-amt custom-input"
+                    placeholder="0"
+                    value=""
+                  />
+                </div>
               </div>
             </div>
 
-            <p class="left-header section-header">Number of People</p>
+            <div class="section-title-wrapper">
+              <p class="left-header section-header">Number of People</p>
+              <p id="people-error" class="section-header error-message">
+                Can't be zero
+              </p>
+            </div>
             <div class="input-container mb-3">
               <img
                 class="person-icon"

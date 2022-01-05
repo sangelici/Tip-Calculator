@@ -73,7 +73,7 @@ $(function () {
           $("#tip-error").show();
         } else {
           $("#customPercentInput").removeClass("invalidValueError");
-          $("#customPercentInput").addClass("selected");
+          // $("#customPercentInput").addClass("selected");
           $("#tip-error").hide();
         }
       });
