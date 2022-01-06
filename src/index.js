@@ -4,7 +4,7 @@ $(function () {
   let tipPercentage;
   let tipTotal;
 
-  function enabledButton() {
+  function handleCalcBtnEnabled() {
     const numOfPeopleNotNil =
       numOfPeople !== "" && numOfPeople !== "0" && numOfPeople !== undefined;
 
@@ -18,34 +18,18 @@ $(function () {
     }
   }
 
-  function updateBillAmount() {
+  function handleBillAmount() {
     bill = $("#billAmount").val();
 
     $("#billAmount").on("blur", () => {
-      if (bill === "0") {
-        $("#billAmount").addClass("invalidValueError");
-        $("#bill-error").show();
-      } else {
-        $("#billAmount").removeClass("invalidValueError");
-        $("#bill-error").hide();
-        enabledButton();
-      }
+      bill == "0"
+        ? ($("#billAmount").addClass("invalidValueError"),
+          $("#bill-error").show())
+        : ($("#billAmount").removeClass("invalidValueError"),
+          $("#bill-error").hide());
     });
-  }
 
-  function updateNumOfPeople() {
-    numOfPeople = $("#numOfPeople").val();
-
-    $("#numOfPeople").on("blur", () => {
-      if (numOfPeople === "0") {
-        $("#numOfPeople").addClass("invalidValueError");
-        $("#people-error").show();
-      } else {
-        $("#numOfPeople").removeClass("invalidValueError");
-        $("#people-error").hide();
-        enabledButton();
-      }
-    });
+    handleCalcBtnEnabled();
   }
 
   function handleTipPercentage() {
@@ -55,42 +39,61 @@ $(function () {
       value = parseFloat(value.replace("%", "")) / 100;
       tipPercentage = value;
     } else {
-      $(".custom-tip").hide();
+      $(".custom-tip-btn").hide();
       $(".custom-tip-input").show();
-      $("#customPercentInput").trigger("focus");
+      $("#customTipInput").trigger("focus");
 
-      $("#customPercentInput").on("input", () => {
-        const customValue = $("#customPercentInput").val();
-
-        value = parseFloat(customValue) / 100;
-
+      $("#customTipInput").on("input", () => {
+        value = parseFloat($("#customTipInput").val()) / 100;
         tipPercentage = value;
       });
 
-      $("#customPercentInput").on("blur", () => {
-        if (tipPercentage === 0) {
-          $("#customPercentInput").addClass("invalidValueError");
-          $("#tip-error").show();
-        } else {
-          $("#customPercentInput").removeClass("invalidValueError");
-          // $("#customPercentInput").addClass("selected");
-          $("#tip-error").hide();
-        }
+      $("#customTipInput").on("blur", () => {
+        tipPercentage == "0"
+          ? ($("#customTipInput").addClass("invalidValueError"),
+            $("#tip-error").show())
+          : ($("#customTipInput").removeClass("invalidValueError"),
+            $("#tip-error").hide());
       });
     }
 
-    enabledButton();
+    handleCalcBtnEnabled();
+  }
+
+  function handleNumOfPeople() {
+    numOfPeople = $("#numOfPeople").val();
+
+    $("#numOfPeople").on("blur", () => {
+      numOfPeople == "0"
+        ? ($("#numOfPeople").addClass("invalidValueError"),
+          $("#people-error").show())
+        : ($("#numOfPeople").removeClass("invalidValueError"),
+          $("#people-error").hide());
+    });
+
+    handleCalcBtnEnabled();
   }
 
   function calculateTotals() {
     let calculateSplitTipAmt = bill * tipPercentage;
-    let calculateBillSplitAmt = (bill / numOfPeople).toFixed(2);
+    let calculateSplitBillAmt = (bill / numOfPeople).toFixed(2);
 
     tipTotal = (calculateSplitTipAmt / numOfPeople).toFixed(2);
 
     $("#final-tip-total").text("$" + tipTotal);
-    $("#final-cost-total").text("$" + calculateBillSplitAmt);
+    $("#final-cost-total").text("$" + calculateSplitBillAmt);
     $("#submit-btn").text("Reset");
+  }
+
+  function handleSelect() {
+    $(".percent-amt").removeClass("selected");
+    $(this).addClass("selected");
+  }
+
+  function handleSubmit() {
+    $("#submit-btn").text().trim() === "Calculate"
+      ? calculateTotals()
+      : handleReset();
   }
 
   function handleReset() {
@@ -100,26 +103,20 @@ $(function () {
     $("#billAmount").val("");
     $("#numOfPeople").val("");
     $(".percent-amt").removeClass("selected");
-    $(".custom-tip").show();
+    $(".custom-tip-btn").show();
     $(".custom-tip-input").val("");
     $("#final-tip-total").text("$0.00");
     $("#final-cost-total").text("$0.00");
     $("#submit-btn").text("Calculate");
   }
 
+  // Jquery Listeners
   $(".error-message").hide();
-  $("#billAmount").on("input", updateBillAmount);
-  $("#numOfPeople").on("input", updateNumOfPeople);
+  $("#billAmount").on("input", handleBillAmount);
   $(".tip-percent").on("click", "button", handleTipPercentage);
-  $(".custom-tip").show();
+  $("#numOfPeople").on("input", handleNumOfPeople);
+  $(".custom-tip-btn").show();
   $(".custom-tip-input").hide();
-  $(".percent-amt").on("click", function () {
-    $(".percent-amt").removeClass("selected");
-    $(this).addClass("selected");
-  });
-  $("#submit-btn").on("click", () => {
-    $("#submit-btn").text().trim() === "Calculate"
-      ? calculateTotals()
-      : handleReset();
-  });
+  $(".percent-amt").on("click", handleSelect);
+  $("#submit-btn").on("click", handleSubmit);
 });

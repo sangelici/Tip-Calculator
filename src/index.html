@@ -56,7 +56,7 @@
         <div class="row p-4">
           <div class="col-6 pl-0 left-container">
             <div class="section-title-wrapper">
-              <p class="left-header section-header">Bill</p>
+              <p class="section-header left-header">Bill</p>
               <p id="bill-error" class="section-header error-message">
                 Can't be zero
               </p>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="section-title-wrapper">
-              <p class="left-header section-header mb-3">Select Tip %</p>
+              <p class="section-header left-header mb-3">Select Tip %</p>
               <p id="tip-error" class="section-header error-message">
                 Can't be zero
               </p>
@@ -132,7 +132,7 @@
                     20%
                   </button>
                 </div>
-                <div class="col-4 px-1 custom-tip">
+                <div class="col-4 px-1 custom-tip-btn">
                   <button
                     id="customPercent"
                     type="button"
@@ -143,7 +143,7 @@
                 </div>
                 <div class="col-4 px-1 custom-tip-input">
                   <input
-                    id="customPercentInput"
+                    id="customTipInput"
                     type="number"
                     class="form-control percent-amt custom-input"
                     placeholder="0"
@@ -154,7 +154,7 @@
             </div>
 
             <div class="section-title-wrapper">
-              <p class="left-header section-header">Number of People</p>
+              <p class="section-header left-header">Number of People</p>
               <p id="people-error" class="section-header error-message">
                 Can't be zero
               </p>
@@ -199,7 +199,8 @@
                 <button
                   id="submit-btn"
                   type="button"
-                  class="btn w-100 result-btn"
+                  class="btn w-100 result-btn disabled-btn"
+                  disabled
                 >
                   Calculate
                 </button>

@@ -4,12 +4,8 @@
 
 html,
 body {
-  background-color: $html-background;
+  background-color: $html-bg-color;
   height: 100%;
-}
-
-p {
-  margin: 5px 0;
 }
 
 input {
@@ -22,37 +18,42 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+p {
+  margin: 5px 0;
+}
+
 .content-wrapper {
   height: auto;
+  left: 50%;
   position: fixed;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
   width: 800px;
 }
 
 .title-container {
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  letter-spacing: 10px;
   height: auto;
+  justify-content: center;
+  letter-spacing: 10px;
   margin: 0 auto;
+  text-align: center;
   width: 25%;
 }
 
 .app-title {
-  color: $warm-evergreen;
+  color: $headerTwo-text-color;
   font-family: $headerTwo-font-family;
   font-size: $headerTwo-font-size;
   font-weight: $headerTwo-font-weight;
-  text-transform: $headerTwo-text-transform;
   margin: 0;
+  text-transform: $headerTwo-text-transform;
 }
 
 .main-container {
-  background-color: $cultured-white;
+  background-color: $main-container-bg-color;
   border-radius: 15px;
+  box-shadow: 0 0 20px 2px $main-container-box-shadow;
   margin: 64px auto;
   max-width: 100%;
 }
@@ -62,15 +63,15 @@ input::-webkit-inner-spin-button {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: $input-text-color;
+  color: $input-placeholder-text-color;
   font-family: $input-font-family;
   font-size: $input-font-size;
   font-weight: $input-font-weight;
 }
 
 .form-control {
-  background-color: $input-primary-bg-color;
-  border: 3px solid $input-primary-bg-color;
+  background-color: $input-bg-color;
+  border: 3px solid $input-border-color;
   color: $input-text-color;
   cursor: pointer;
   font-family: $primary-font-family;
@@ -86,17 +87,17 @@ input::-webkit-inner-spin-button {
 
   &:focus {
     background-color: $input-focus-bg-color;
+    border: 3px solid $input-focus-border-color;
+    box-shadow: none;
     color: $input-text-color;
     outline-style: none;
-    box-shadow: none;
-    border: 3px solid $input-focus-border-color;
   }
 }
 
 .input-container {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 .dollar-icon,
@@ -113,7 +114,7 @@ input::-webkit-inner-spin-button {
 }
 
 .results-container {
-  background-color: $warm-evergreen;
+  background-color: $right-container-bg-color;
   border-radius: 10px;
   padding: 20px 32px;
   position: relative;
@@ -123,7 +124,7 @@ input::-webkit-inner-spin-button {
   display: flex;
 
   .left-header {
-    color: $rich-black;
+    color: $contentTwo-primary-text-color;
   }
 
   .error-message {
@@ -133,11 +134,11 @@ input::-webkit-inner-spin-button {
 }
 
 .right-header {
-  color: $cultured-white;
+  color: $contentTwo-secondary-text-color;
 }
 
 .section-header {
-  font-family: $contentOne-font-family;
+  font-family: $contentTwo-font-family;
   font-size: $contentTwo-font-size;
   font-weight: $contentTwo-font-weight;
 }
@@ -147,7 +148,7 @@ input::-webkit-inner-spin-button {
   justify-content: right;
 
   & .totals {
-    color: $keppel;
+    color: $headerOne-text-color;
     font-family: $headerOne-font-family;
     font-size: $headerOne-font-size;
     font-weight: $headerOne-font-weight;
@@ -155,15 +156,15 @@ input::-webkit-inner-spin-button {
 }
 
 .sub-header {
-  color: $pewter-blue;
+  color: $subHeader-text-color;
   font-family: $subHeader-font-family;
   font-size: $subHeader-font-size;
   font-weight: $subHeader-font-weight;
 }
 
 .reset-wrapper {
-  position: absolute;
   bottom: 20px;
+  position: absolute;
   width: calc((100% - (32px * 2)) + 30px);
 }
 
@@ -172,8 +173,13 @@ input::-webkit-inner-spin-button {
   letter-spacing: 2px;
 
   &:focus {
-    outline-style: none;
     box-shadow: none;
+    outline-style: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: visible;
   }
 }
 
@@ -187,20 +193,21 @@ input::-webkit-inner-spin-button {
 
   &:hover {
     background-color: $btn-primary-hover-bg-color;
-    border: 3px solid $btn-primary-hover-bg-color;
+    border: 3px solid $btn-primary-hover-border-color;
     color: $btn-primary-hover-text-color;
   }
 
   &:focus {
     background-color: $btn-primary-focus-bg-color;
+    border: 3px solid $btn-primary-focus-border-color;
     color: $btn-primary-focus-text-color;
   }
 }
 
 .custom {
-  background-color: $mint-cream;
-  border: 3px solid $input-primary-bg-color;
-  color: $warm-evergreen;
+  background-color: $custom-btn-bg-color;
+  border: 3px solid $input-border-color;
+  color: $btn-secondary-text-color;
   cursor: pointer;
   font-family: $btn-primary-font-family;
   font-size: $btn-primary-font-size;
@@ -213,8 +220,8 @@ input::-webkit-inner-spin-button {
 }
 
 .custom-input {
-  background-color: $input-primary-bg-color;
-  border: 3px solid $input-primary-bg-color;
+  background-color: $input-bg-color;
+  border: 3px solid $input-border-color;
   color: $input-text-color;
   cursor: pointer;
   font-family: $btn-primary-font-family;
@@ -232,10 +239,10 @@ input::-webkit-inner-spin-button {
 
   &:focus {
     background-color: $input-focus-bg-color;
+    border: 3px solid $input-focus-border-color;
+    box-shadow: none;
     color: $input-text-color;
     outline-style: none;
-    box-shadow: none;
-    border: 3px solid $input-focus-border-color;
   }
 }
 
@@ -252,6 +259,21 @@ input::-webkit-inner-spin-button {
   font-size: $btn-secondary-font-size;
   font-weight: $btn-secondary-font-weight;
   text-transform: $btn-secondary-text-transform;
+
+  &:hover {
+    background-color: $btn-secondary-hover-bg-color;
+    border: 3px solid $btn-secondary-hover-border-color;
+  }
+
+  &:focus {
+    background-color: $btn-secondary-focus-bg-color;
+    border: 3px solid $btn-secondary-focus-border-color;
+    color: $btn-secondary-focus-text-color;
+  }
+}
+
+.disabled-btn {
+  cursor: not-allowed;
 }
 
 .invalidValueError {
