@@ -19,9 +19,15 @@ $(function () {
   }
 
   function handleBillAmount() {
-    bill = $("#billAmount").val();
+    const formatter = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    });
+
+    bill = formatter.format($("#billAmount").val()).replace("$", "");
 
     $("#billAmount").on("blur", () => {
+      $("#billAmount").val(bill);
       bill == "0"
         ? ($("#billAmount").addClass("invalidValueError"),
           $("#bill-error").show())
@@ -80,6 +86,8 @@ $(function () {
 
     tipTotal = (calculateSplitTipAmt / numOfPeople).toFixed(2);
 
+    $("input").attr("disabled", true);
+    $("input").addClass("disabled-input");
     $("#final-tip-total").text("$" + tipTotal);
     $("#final-cost-total").text("$" + calculateSplitBillAmt);
     $("#submit-btn").text("Reset");
@@ -100,10 +108,13 @@ $(function () {
     bill = "";
     numOfPeople = "";
     tipPercentage = "";
+    $("input").removeAttr("disabled");
+    $("input").removeClass("disabled-input");
     $("#billAmount").val("");
     $("#numOfPeople").val("");
     $(".percent-amt").removeClass("selected");
     $(".custom-tip-btn").show();
+    $(".custom-tip-input").hide();
     $(".custom-tip-input").val("");
     $("#final-tip-total").text("$0.00");
     $("#final-cost-total").text("$0.00");

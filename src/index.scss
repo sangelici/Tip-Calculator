@@ -4,7 +4,7 @@
 
 html,
 body {
-  background-color: $html-bg-color;
+  background-image: url("../images/money-background.jpg");
   height: 100%;
 }
 
@@ -23,12 +23,15 @@ p {
 }
 
 .content-wrapper {
-  height: auto;
+  background-color: $html-bg-color;
+  border-radius: 25px;
+  box-shadow: 0 0 15px 2px $main-container-box-shadow;
+  height: 800px;
   left: 50%;
-  position: fixed;
+  position: relative;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 800px;
+  width: 1200px;
 }
 
 .title-container {
@@ -37,6 +40,7 @@ p {
   justify-content: center;
   letter-spacing: 10px;
   margin: 0 auto;
+  padding-top: 110px;
   text-align: center;
   width: 25%;
 }
@@ -54,8 +58,12 @@ p {
   background-color: $main-container-bg-color;
   border-radius: 15px;
   box-shadow: 0 0 20px 2px $main-container-box-shadow;
-  margin: 64px auto;
-  max-width: 100%;
+  left: 50%;
+  margin: 32px auto;
+  max-width: 65%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .left-container {
@@ -273,6 +281,10 @@ p {
 }
 
 .disabled-btn {
+  cursor: not-allowed;
+}
+
+.disabled-input {
   cursor: not-allowed;
 }
 
