@@ -24,7 +24,7 @@ input::-webkit-inner-spin-button {
 
 .content-wrapper {
   height: auto;
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -171,4 +171,44 @@ input::-webkit-inner-spin-button {
   font-size: $btn-secondary-font-size;
   font-weight: $btn-secondary-font-weight;
   text-transform: $btn-secondary-text-transform;
+}
+
+// Mobile Styles
+
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .content-wrapper {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  .title-container {
+    margin: 32px auto;
+  }
+
+  .main-container {
+    margin: 0;
+  }
+
+  .left-container {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .reset-wrapper {
+    position: initial;
+    width: auto;
+    margin-top: 24px;
+  }
+
+  .generated-amt {
+    & .totals {
+      font-size: $headerOne-sm-font-size;
+    }
+  }
 }
