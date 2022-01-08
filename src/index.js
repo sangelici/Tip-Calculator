@@ -44,6 +44,9 @@ $(function () {
     if (value !== "custom") {
       value = parseFloat(value.replace("%", "")) / 100;
       tipPercentage = value;
+
+      $(".custom-tip-btn").show();
+      $(".custom-tip-input").hide();
     } else {
       $(".custom-tip-btn").hide();
       $(".custom-tip-input").show();
