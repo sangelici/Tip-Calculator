@@ -10418,10 +10418,16 @@ p {
   margin: 5px 0;
 }
 .content-wrapper {
+<<<<<<< HEAD
   background-color: #d8f2f7;
   border-radius: 25px;
   box-shadow: 0 0 15px 2px rgba(2, 129, 136, 0.25);
   height: 800px;
+=======
+  height: auto;
+  position: relative;
+  top: 50%;
+>>>>>>> a49bbae (add mobile responsiveness)
   left: 50%;
   position: relative;
   top: 50%;
@@ -10629,6 +10635,7 @@ p {
   font-weight: 700;
   text-transform: uppercase;
 }
+<<<<<<< HEAD
 .result-btn:hover {
   background-color: #26c0ab;
   border: 3px solid #26c0ab;
@@ -10646,5 +10653,41 @@ p {
 }
 .invalidValueError {
   border: 3px solid #df4837;
+=======
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .content-wrapper {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  .title-container {
+    margin: 32px auto;
+  }
+
+  .main-container {
+    margin: 0;
+  }
+
+  .left-container {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .reset-wrapper {
+    position: initial;
+    width: auto;
+    margin-top: 24px;
+  }
+
+  .generated-amt .totals {
+    font-size: 32px;
+  }
+>>>>>>> a49bbae (add mobile responsiveness)
 }
 /*# sourceMappingURL=index.1f6edfee.css.map */

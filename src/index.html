@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
 
     <link
@@ -53,15 +53,14 @@
       </div>
 
       <div class="container-fluid px-4 main-container d-flex flex-column">
-        <div class="row p-4">
-          <div class="col-6 pl-0 left-container">
+        <div class="row p-3 p-sm-4">
+          <div class="col-sm-6 col-xs-12 pl-0 left-container">
             <div class="section-title-wrapper">
               <p class="section-header left-header">Bill</p>
               <p id="bill-error" class="section-header error-message">
                 Can't be zero
               </p>
             </div>
-
             <div class="input-container mb-4">
               <img
                 class="dollar-icon"
@@ -84,73 +83,61 @@
                 Can't be zero
               </p>
             </div>
-            <div class="percentage-options-container">
-              <div class="row mx-0 tip-percent">
-                <div class="col-4 px-1">
-                  <button
-                    id="5percent"
-                    type="button"
-                    class="btn btn-default btn-block percent-amt"
-                  >
-                    5%
-                  </button>
-                </div>
-                <div class="col-4 px-1">
-                  <button
-                    id="10percent"
-                    type="button"
-                    class="btn btn-default btn-block percent-amt"
-                  >
-                    10%
-                  </button>
-                </div>
-                <div class="col-4 px-1">
-                  <button
-                    id="15percent"
-                    type="button"
-                    class="btn btn-default btn-block percent-amt"
-                  >
-                    15%
-                  </button>
-                </div>
+            <div class="row percentage-options-container">
+              <div class="col-6 col-sm-4 px-1">
+                <button
+                  id="5percent"
+                  type="button"
+                  class="btn btn-block percent-amt"
+                >
+                  5%
+                </button>
               </div>
-              <div class="row mx-0 mt-2 tip-percent">
-                <div class="col-4 px-1">
-                  <button
-                    id="18percent"
-                    type="button"
-                    class="btn btn-default btn-block percent-amt"
-                  >
-                    18%
-                  </button>
-                </div>
-                <div class="col-4 px-1">
-                  <button
-                    id="20percent"
-                    type="button"
-                    class="btn btn-default btn-block percent-amt"
-                  >
-                    20%
-                  </button>
-                </div>
-                <div class="col-4 px-1 custom-tip-btn">
-                  <button
-                    id="customPercent"
-                    type="button"
-                    class="btn btn-default btn-block percent-amt custom"
-                  >
-                    Custom
-                  </button>
-                </div>
-                <div class="col-4 px-1 custom-tip-input">
-                  <input
-                    id="customTipInput"
-                    type="number"
-                    class="form-control percent-amt custom-input"
-                    placeholder="0"
-                    value=""
-                  />
-                </div>
+              <div class="col-6 col-sm-4 px-1">
+                <button
+                  id="10percent"
+                  type="button"
+                  class="btn btn-block percent-amt"
+                >
+                  10%
+                </button>
+              </div>
+              <div class="col-6 col-sm-4 mt-2 mt-sm-0 px-1">
+                <button
+                  id="15percent"
+                  type="button"
+                  class="btn btn-block percent-amt"
+                >
+                  15%
+                </button>
+              </div>
+
+              <div class="col-6 col-sm-4 mt-2 px-1">
+                <button
+                  id="18percent"
+                  type="button"
+                  class="btn btn-block percent-amt"
+                >
+                  18%
+                </button>
+              </div>
+              <div class="col-6 col-sm-4 mt-2 px-1">
+                <button
+                  id="20percent"
+                  type="button"
+                  class="btn btn-block percent-amt"
+                >
+                  20%
+                </button>
+              </div>
+              <div class="col-6 col-sm-4 mt-2 px-1">
+                <button
+                  id="customPercent"
+                  type="button"
+                  class="btn btn-block percent-amt custom"
+                >
+                  Custom
+                </button>
               </div>
             </div>
 
@@ -176,7 +163,7 @@
             </div>
           </div>
 
-          <div class="col-6 results-container">
+          <div class="col-sm-6 col-xs-12 results-container">
             <div class="row mt-3">
               <div class="col-6">
                 <p class="right-header section-header mt-2">Tip Amount</p>
