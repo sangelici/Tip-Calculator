@@ -10629,8 +10629,6 @@ p {
   font-weight: 700;
   text-transform: uppercase;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 .result-btn:hover {
   background-color: #26c0ab;
   border: 3px solid #26c0ab;
@@ -10648,39 +10646,29 @@ p {
 }
 .invalidValueError {
   border: 3px solid #df4837;
-=======
-@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-=======
-@media screen and (max-device-width: 480px) {
->>>>>>> 8bc3ac3 (PR feedback)
-  body {
-<<<<<<< Updated upstream
-    margin: 0 !important;
-    padding: 0 !important;
-=======
+}
 @media screen and (max-device-width: 480px) {
   body {
     margin: 0;
     padding: 0;
->>>>>>> 8bc3ac3168b4e1eba09f62c5d6f408d50ad61903
-=======
-    margin: 0;
-    padding: 0;
->>>>>>> Stashed changes
   }
 
   .content-wrapper {
     height: 100%;
+    padding-top: 32px;
     position: absolute;
     width: 100%;
   }
 
   .title-container {
     margin: 32px auto;
+    padding: 0;
   }
 
   .main-container {
     margin: 0;
+    max-width: 100%;
+    position: relative;
   }
 
   .left-container {
@@ -10689,29 +10677,13 @@ p {
   }
 
   .reset-wrapper {
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    position: initial;
-    width: auto;
-    margin-top: 24px;
-=======
     margin-top: 24px;
     position: initial;
     width: auto;
->>>>>>> 8bc3ac3168b4e1eba09f62c5d6f408d50ad61903
-=======
-    margin-top: 24px;
-    position: initial;
-    width: auto;
->>>>>>> Stashed changes
   }
 
   .generated-amt .totals {
     font-size: 32px;
   }
-<<<<<<< HEAD
->>>>>>> a49bbae (add mobile responsiveness)
-=======
->>>>>>> 8bc3ac3168b4e1eba09f62c5d6f408d50ad61903
 }
 /*# sourceMappingURL=index.1f6edfee.css.map */
