@@ -10647,4 +10647,43 @@ p {
 .invalidValueError {
   border: 3px solid #df4837;
 }
+@media screen and (max-device-width: 480px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .content-wrapper {
+    height: 100%;
+    padding-top: 32px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .title-container {
+    margin: 32px auto;
+    padding: 0;
+  }
+
+  .main-container {
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .left-container {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .reset-wrapper {
+    margin-top: 24px;
+    position: initial;
+    width: auto;
+  }
+
+  .generated-amt .totals {
+    font-size: 32px;
+  }
+}
 /*# sourceMappingURL=index.1f6edfee.css.map */
