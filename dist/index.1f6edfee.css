@@ -10546,10 +10546,10 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
   text-transform: uppercase;
 }
-@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (max-device-width: 480px) {
   body {
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
   }
 
   .content-wrapper {
@@ -10572,9 +10572,9 @@ input::-webkit-inner-spin-button {
   }
 
   .reset-wrapper {
+    margin-top: 24px;
     position: initial;
     width: auto;
-    margin-top: 24px;
   }
 
   .generated-amt .totals {
