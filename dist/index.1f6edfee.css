@@ -10418,16 +10418,10 @@ p {
   margin: 5px 0;
 }
 .content-wrapper {
-<<<<<<< HEAD
   background-color: #d8f2f7;
   border-radius: 25px;
   box-shadow: 0 0 15px 2px rgba(2, 129, 136, 0.25);
   height: 800px;
-=======
-  height: auto;
-  position: relative;
-  top: 50%;
->>>>>>> a49bbae (add mobile responsiveness)
   left: 50%;
   position: relative;
   top: 50%;
@@ -10636,6 +10630,7 @@ p {
   text-transform: uppercase;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .result-btn:hover {
   background-color: #26c0ab;
   border: 3px solid #26c0ab;
@@ -10655,9 +10650,23 @@ p {
   border: 3px solid #df4837;
 =======
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+=======
+@media screen and (max-device-width: 480px) {
+>>>>>>> 8bc3ac3 (PR feedback)
   body {
+<<<<<<< Updated upstream
     margin: 0 !important;
     padding: 0 !important;
+=======
+@media screen and (max-device-width: 480px) {
+  body {
+    margin: 0;
+    padding: 0;
+>>>>>>> 8bc3ac3168b4e1eba09f62c5d6f408d50ad61903
+=======
+    margin: 0;
+    padding: 0;
+>>>>>>> Stashed changes
   }
 
   .content-wrapper {
@@ -10680,14 +10689,29 @@ p {
   }
 
   .reset-wrapper {
+<<<<<<< Updated upstream
+<<<<<<< HEAD
     position: initial;
     width: auto;
     margin-top: 24px;
+=======
+    margin-top: 24px;
+    position: initial;
+    width: auto;
+>>>>>>> 8bc3ac3168b4e1eba09f62c5d6f408d50ad61903
+=======
+    margin-top: 24px;
+    position: initial;
+    width: auto;
+>>>>>>> Stashed changes
   }
 
   .generated-amt .totals {
     font-size: 32px;
   }
+<<<<<<< HEAD
 >>>>>>> a49bbae (add mobile responsiveness)
+=======
+>>>>>>> 8bc3ac3168b4e1eba09f62c5d6f408d50ad61903
 }
 /*# sourceMappingURL=index.1f6edfee.css.map */
