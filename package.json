@@ -2,8 +2,8 @@
   "name": "tip-calculator",
   "source": "src/index.html",
   "engines": {
-    "node": "16.13.0",
-    "npm": "8.3.0"
+    "node": "16.x",
+    "npm": "8.x"
   },
   "scripts": {
     "clean:output": "rimraf dist",
