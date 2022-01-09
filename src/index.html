@@ -46,22 +46,22 @@
     ></script>
     <script type="text/javascript" src="./index.js"></script>
 
-    <div class="content-wrapper">
-      <div class="title-container">
+    <div class="content-wrapper" role="main">
+      <div class="title-container" role="banner">
         <h1 class="app-title">Spli</h1>
         <h1 class="app-title">tter</h1>
       </div>
 
       <div class="container-fluid px-4 main-container d-flex flex-column">
         <div class="row p-3 p-sm-4">
-          <div class="col-12 col-sm-6 pl-0 left-container">
+          <div class="col-12 col-sm-6 pl-0 left-container" role="section">
             <div class="section-title-wrapper">
-              <p class="section-header left-header">Bill</p>
+              <p class="section-header left-header" role="banner">Bill</p>
               <p id="bill-error" class="section-header error-message">
                 Can't be zero
               </p>
             </div>
-            <div class="input-container mb-4">
+            <div class="input-container mb-4" role="form">
               <img
                 class="dollar-icon"
                 src="../images/icon-dollar.svg"
@@ -79,13 +79,15 @@
             </div>
 
             <div class="section-title-wrapper">
-              <p class="section-header left-header mb-3">Select Tip %</p>
+              <p class="section-header left-header mb-3" role="banner">
+                Select Tip %
+              </p>
               <p id="tip-error" class="section-header error-message">
                 Can't be zero
               </p>
             </div>
             <div class="row percentage-options-container tip-percent">
-              <div class="col-6 col-sm-4 px-1">
+              <div class="col-6 col-sm-4 px-1" role="form">
                 <button
                   id="5percent"
                   type="button"
@@ -94,7 +96,7 @@
                   5%
                 </button>
               </div>
-              <div class="col-6 col-sm-4 px-1">
+              <div class="col-6 col-sm-4 px-1" role="form">
                 <button
                   id="10percent"
                   type="button"
@@ -103,7 +105,7 @@
                   10%
                 </button>
               </div>
-              <div class="col-6 col-sm-4 mt-2 mt-sm-0 px-1">
+              <div class="col-6 col-sm-4 mt-2 mt-sm-0 px-1" role="form">
                 <button
                   id="15percent"
                   type="button"
@@ -112,7 +114,7 @@
                   15%
                 </button>
               </div>
-              <div class="col-6 col-sm-4 mt-2 px-1">
+              <div class="col-6 col-sm-4 mt-2 px-1" role="form">
                 <button
                   id="18percent"
                   type="button"
@@ -121,7 +123,7 @@
                   18%
                 </button>
               </div>
-              <div class="col-6 col-sm-4 mt-2 px-1">
+              <div class="col-6 col-sm-4 mt-2 px-1" role="form">
                 <button
                   id="20percent"
                   type="button"
@@ -130,7 +132,7 @@
                   20%
                 </button>
               </div>
-              <div class="col-6 col-sm-4 mt-2 px-1 custom-tip-btn">
+              <div class="col-6 col-sm-4 mt-2 px-1 custom-tip-btn" role="form">
                 <button
                   id="customPercent"
                   type="button"
@@ -152,12 +154,14 @@
             </div>
 
             <div class="section-title-wrapper">
-              <p class="section-header left-header">Number of People</p>
+              <p class="section-header left-header" role="banner">
+                Number of People
+              </p>
               <p id="people-error" class="section-header error-message">
                 Can't be zero
               </p>
             </div>
-            <div class="input-container mb-3">
+            <div class="input-container mb-3" role="form">
               <img
                 class="person-icon"
                 src="../images/icon-person.svg"
@@ -174,7 +178,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-sm-6 results-container">
+          <div class="col-12 col-sm-6 results-container" role="section">
             <div class="row mt-3">
               <div class="col-6">
                 <p class="right-header section-header mt-2">Tip Amount</p>
