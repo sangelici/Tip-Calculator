@@ -11,7 +11,7 @@
     "build": "npm run clean:output && parcel build src/index.html"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.0.1",
+    "@parcel/transformer-sass": "2.1.1",
     "eslint": "8.4.1",
     "parcel": "2.0.1",
     "rimraf": "3.0.2",
