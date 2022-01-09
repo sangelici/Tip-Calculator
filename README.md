@@ -8,11 +8,8 @@
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -31,8 +28,6 @@ Users should be able to:
 ![Error State](./images/error-state-screenshot.png)
 
 ### Links
-
-<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
 
 - Live Site URL: [Splitter Live Site](https://splitter-tip-calculator.herokuapp.com/)
 
@@ -62,4 +57,3 @@ While the fundamental pieces of the app have been accomplished (🎉), there are
 
 - Website - [Portfolio](https://sangelici.github.io/)
 - Frontend Mentor - [@sangelici](https://www.frontendmentor.io/profile/sangelici)
-<!-- - Twitter - [@yourusername](https://www.twitter.com/yourusername) -->
