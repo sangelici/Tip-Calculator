@@ -1,6 +1,10 @@
 {
   "name": "tip-calculator",
   "source": "src/index.html",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "scripts": {
     "clean:output": "rimraf dist",
     "start": "npm run clean:output && parcel src/index.html",
