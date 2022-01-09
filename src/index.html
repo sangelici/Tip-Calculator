@@ -47,16 +47,18 @@
     <script type="text/javascript" src="./index.js"></script>
 
     <div class="content-wrapper" role="main">
-      <div class="title-container" role="banner">
+      <div class="title-container" aria-label="splitter-app-title">
         <h1 class="app-title">Spli</h1>
         <h1 class="app-title">tter</h1>
       </div>
 
       <div class="container-fluid px-4 main-container d-flex flex-column">
         <div class="row p-3 p-sm-4">
-          <div class="col-12 col-sm-6 pl-0 left-container" role="section">
+          <div class="col-12 col-sm-6 pl-0 left-container" role="region">
             <div class="section-title-wrapper">
-              <p class="section-header left-header" role="banner">Bill</p>
+              <p class="section-header left-header" aria-label="bill-label">
+                Bill
+              </p>
               <p id="bill-error" class="section-header error-message">
                 Can't be zero
               </p>
@@ -79,7 +81,10 @@
             </div>
 
             <div class="section-title-wrapper">
-              <p class="section-header left-header mb-3" role="banner">
+              <p
+                class="section-header left-header mb-3"
+                aria-label="select-tip-percentage-label"
+              >
                 Select Tip %
               </p>
               <p id="tip-error" class="section-header error-message">
@@ -87,7 +92,7 @@
               </p>
             </div>
             <div class="row percentage-options-container tip-percent">
-              <div class="col-6 col-sm-4 px-1" role="form">
+              <div class="col-6 col-sm-4 px-1" aria-label="5-percent-btn">
                 <button
                   id="5percent"
                   type="button"
@@ -96,7 +101,7 @@
                   5%
                 </button>
               </div>
-              <div class="col-6 col-sm-4 px-1" role="form">
+              <div class="col-6 col-sm-4 px-1" aria-label="10-percent-btn">
                 <button
                   id="10percent"
                   type="button"
@@ -105,7 +110,10 @@
                   10%
                 </button>
               </div>
-              <div class="col-6 col-sm-4 mt-2 mt-sm-0 px-1" role="form">
+              <div
+                class="col-6 col-sm-4 mt-2 mt-sm-0 px-1"
+                aria-label="15-percent-btn"
+              >
                 <button
                   id="15percent"
                   type="button"
@@ -114,7 +122,7 @@
                   15%
                 </button>
               </div>
-              <div class="col-6 col-sm-4 mt-2 px-1" role="form">
+              <div class="col-6 col-sm-4 mt-2 px-1" aria-label="18-percent-btn">
                 <button
                   id="18percent"
                   type="button"
@@ -123,7 +131,7 @@
                   18%
                 </button>
               </div>
-              <div class="col-6 col-sm-4 mt-2 px-1" role="form">
+              <div class="col-6 col-sm-4 mt-2 px-1" aria-label="20-percent-btn">
                 <button
                   id="20percent"
                   type="button"
@@ -132,7 +140,10 @@
                   20%
                 </button>
               </div>
-              <div class="col-6 col-sm-4 mt-2 px-1 custom-tip-btn" role="form">
+              <div
+                class="col-6 col-sm-4 mt-2 px-1 custom-tip-btn"
+                aria-label="custom-percent-btn"
+              >
                 <button
                   id="customPercent"
                   type="button"
@@ -154,7 +165,10 @@
             </div>
 
             <div class="section-title-wrapper">
-              <p class="section-header left-header" role="banner">
+              <p
+                class="section-header left-header"
+                aria-label="number-of-people-label"
+              >
                 Number of People
               </p>
               <p id="people-error" class="section-header error-message">
@@ -178,7 +192,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-sm-6 results-container" role="section">
+          <div class="col-12 col-sm-6 results-container" role="region">
             <div class="row mt-3">
               <div class="col-6">
                 <p class="right-header section-header mt-2">Tip Amount</p>
