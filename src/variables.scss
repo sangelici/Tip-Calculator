@@ -1,34 +1,53 @@
 // primary styles
 $primary-font-family: "Space Mono", monospace;
+$primary-error-color: rgba(223, 72, 55, 1);
 
+// Seafoam Palette
 $celeste: rgba(160, 247, 235, 0.8);
 $cultured-white: rgba(252, 252, 252, 1);
-$keppel: rgba(38, 192, 171, 1);
+$keppel: rgba(43, 215, 192, 1);
 $light-cyan: rgba(216, 242, 247, 1);
 $mint-cream: rgba(241, 250, 250, 0.9);
-$powdered-blue: rgba(197, 228, 231, 1);
-$pewter-blue: rgba(127, 156, 159, 1);
+$powdered-blue: rgba(177, 216, 219, 1);
+$pewter-blue: rgba(152, 196, 201, 1);
 $rich-black: rgba(5, 5, 5, 1);
 $steel-teal: rgba(94, 122, 125, 1);
+$turquoise: rgba(153, 234, 223, 1);
+$viridian-green: rgba(2, 129, 136, 0.25);
 $warm-evergreen: rgba(0, 73, 77, 1);
 
-$html-background: $light-cyan;
+$html-bg-color: $light-cyan;
+
+$main-container-bg-color: $cultured-white;
+$main-container-box-shadow: $viridian-green;
+
+$right-container-bg-color: $warm-evergreen;
+
+$custom-btn-bg-color: $mint-cream;
 
 // Header styles
-$headerOne-font-color: $rich-black;
 $headerOne-font-size: 40px;
 $headerOne-font-weight: 600;
 $headerOne-font-family: $primary-font-family;
+$headerOne-text-color: $keppel;
+
+$headerOne-sm-font-size: 32px;
 
 $headerTwo-font-size: 22px;
 $headerTwo-font-weight: 600;
 $headerTwo-font-family: $primary-font-family;
+$headerTwo-text-color: $warm-evergreen;
 $headerTwo-text-transform: uppercase;
 
 $headerThree-font-size: 18px;
-$headerThree-font-weight: 500;
+$headerThree-font-weight: 600;
 $headerThree-font-family: $primary-font-family;
 $headerThree-text-transform: uppercase;
+
+$subHeader-font-size: 12px;
+$subHeader-font-weight: 400;
+$subHeader-font-family: $primary-font-family;
+$subHeader-text-color: $pewter-blue;
 
 $contentOne-font-size: 16px;
 $contentOne-font-weight: 700;
@@ -37,17 +56,23 @@ $contentOne-font-family: $primary-font-family;
 $contentTwo-font-size: 12px;
 $contentTwo-font-weight: 400;
 $contentTwo-font-family: $primary-font-family;
-
-$subHeader-font-size: 10px;
-$subHeader-font-weight: 400;
-$subHeader-font-family: $primary-font-family;
+$contentTwo-primary-text-color: $rich-black;
+$contentTwo-secondary-text-color: $cultured-white;
 
 // Input Styles
-$input-primary-bg-color: $mint-cream;
-$input-text-color: $pewter-blue;
+$input-bg-color: $mint-cream;
+$input-border-color: $input-bg-color;
 $input-font-family: $headerTwo-font-family;
 $input-font-size: $contentOne-font-size;
 $input-font-weight: $contentOne-font-weight;
+$input-placeholder-text-color: $powdered-blue;
+$input-text-color: $pewter-blue;
+
+$input-hover-bg-color: $input-bg-color;
+$input-hover-border-color: $turquoise;
+
+$input-focus-bg-color: $input-bg-color;
+$input-focus-border-color: $turquoise;
 
 // Button Styles
 $btn-primary-bg-color: $warm-evergreen;
@@ -57,9 +82,25 @@ $btn-primary-font-weight: $headerThree-font-weight;
 $btn-primary-text-color: $cultured-white;
 $btn-primary-text-transform: capitalize;
 
+$btn-primary-hover-bg-color: $turquoise;
+$btn-primary-hover-border-color: $btn-primary-hover-bg-color;
+$btn-primary-hover-text-color: $warm-evergreen;
+
+$btn-primary-focus-bg-color: $turquoise;
+$btn-primary-focus-border-color: $btn-primary-focus-bg-color;
+$btn-primary-focus-text-color: $warm-evergreen;
+
 $btn-secondary-bg-color: $celeste;
 $btn-secondary-font-family: $contentOne-font-family;
 $btn-secondary-font-size: $contentOne-font-size;
 $btn-secondary-font-weight: $contentOne-font-weight;
 $btn-secondary-text-color: $warm-evergreen;
 $btn-secondary-text-transform: uppercase;
+
+$btn-secondary-hover-bg-color: $keppel;
+$btn-secondary-hover-border-color: $btn-secondary-hover-bg-color;
+$btn-secondary-hover-text-color: $warm-evergreen;
+
+$btn-secondary-focus-bg-color: $keppel;
+$btn-secondary-focus-border-color: $btn-secondary-focus-bg-color;
+$btn-secondary-focus-text-color: $warm-evergreen;
