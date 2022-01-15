@@ -144,29 +144,52 @@ p {
   color: $contentTwo-secondary-text-color;
 }
 
-.section-header {
-  font-family: $contentTwo-font-family;
-  font-size: $contentTwo-font-size;
-  font-weight: $contentTwo-font-weight;
+.section-wrapper {
+  display: flex;
+  align-items: center;
+
+  & .section-header {
+    font-family: $contentTwo-font-family;
+    font-size: $contentTwo-font-size;
+    font-weight: $contentTwo-font-weight;
+  }
+
+  & .section-subheader {
+    font-family: $contentThree-font-family;
+    font-size: $contentThree-font-size;
+    font-weight: $contentThree-font-weight;
+  }
 }
 
 .generated-amt {
   display: flex;
-  justify-content: right;
+  align-items: center;
+  justify-content: flex-end;
 
-  & .totals {
+  & .total {
     color: $headerOne-text-color;
     font-family: $headerOne-font-family;
     font-size: $headerOne-font-size;
     font-weight: $headerOne-font-weight;
+    margin: 0;
+  }
+
+  & .subtotals {
+    color: $subHeader-text-color;
+    font-family: $subHeader-font-family;
+    font-size: $subHeader-font-size;
+    font-weight: $subHeader-font-weight;
+    margin: 0;
   }
 }
 
 .sub-header {
-  color: $subHeader-text-color;
-  font-family: $subHeader-font-family;
-  font-size: $subHeader-font-size;
-  font-weight: $subHeader-font-weight;
+  color: $headerThree-text-color;
+  font-family: $headerThree-font-family;
+  font-size: $headerThree-font-size;
+  font-weight: $headerThree-font-weight;
+  text-align: center;
+  text-transform: $headerThree-text-transform;
 }
 
 .reset-wrapper {
@@ -300,7 +323,6 @@ p {
 
   .content-wrapper {
     height: 100%;
-    padding-top: 32px;
     position: absolute;
     width: 100%;
   }
@@ -331,8 +353,12 @@ p {
   }
 
   .generated-amt {
-    & .totals {
+    & .total {
       font-size: $headerOne-sm-font-size;
+    }
+
+    & .subtotals {
+      font-size: $subHeader-sm-font-size;
     }
   }
 }

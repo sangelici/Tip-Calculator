@@ -3,6 +3,7 @@ $(function () {
   let numOfPeople;
   let tipPercentage;
   let tipTotal;
+  let total;
 
   function handleCalcBtnEnabled() {
     const numOfPeopleNotNil =
@@ -85,14 +86,16 @@ $(function () {
 
   function calculateTotals() {
     let calculateSplitTipAmt = bill * tipPercentage;
-    let calculateSplitBillAmt = (bill / numOfPeople).toFixed(2);
+    let calculateSplitBillAmt = bill / numOfPeople;
 
-    tipTotal = (calculateSplitTipAmt / numOfPeople).toFixed(2);
+    tipTotal = calculateSplitTipAmt / numOfPeople;
+    total = calculateSplitBillAmt + tipTotal;
 
     $("input").attr("disabled", true);
     $("input").addClass("disabled-input");
-    $("#final-tip-total").text("$" + tipTotal);
-    $("#final-cost-total").text("$" + calculateSplitBillAmt);
+    $("#total-split").text("$" + total.toFixed(2));
+    $("#total-tip-split").text("$" + tipTotal.toFixed(2));
+    $("#total-bill-split").text("$" + calculateSplitBillAmt.toFixed(2));
     $("#submit-btn").text("Reset");
   }
 
@@ -119,8 +122,9 @@ $(function () {
     $(".custom-tip-btn").show();
     $(".custom-tip-input").hide();
     $(".custom-tip-input").val("");
-    $("#final-tip-total").text("$0.00");
-    $("#final-cost-total").text("$0.00");
+    $("#total-split").text("$0.00");
+    $("#total-tip-split").text("$0.00");
+    $("#total-bill-split").text("$0.00");
     $("#submit-btn").text("Calculate");
   }
 

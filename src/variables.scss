@@ -26,12 +26,12 @@ $right-container-bg-color: $warm-evergreen;
 $custom-btn-bg-color: $mint-cream;
 
 // Header styles
-$headerOne-font-size: 40px;
+$headerOne-font-size: 34px;
 $headerOne-font-weight: 600;
 $headerOne-font-family: $primary-font-family;
 $headerOne-text-color: $keppel;
 
-$headerOne-sm-font-size: 32px;
+$headerOne-sm-font-size: 28px;
 
 $headerTwo-font-size: 22px;
 $headerTwo-font-weight: 600;
@@ -42,22 +42,29 @@ $headerTwo-text-transform: uppercase;
 $headerThree-font-size: 18px;
 $headerThree-font-weight: 600;
 $headerThree-font-family: $primary-font-family;
+$headerThree-text-color: $pewter-blue;
 $headerThree-text-transform: uppercase;
 
-$subHeader-font-size: 12px;
+$subHeader-font-size: 26px;
 $subHeader-font-weight: 400;
 $subHeader-font-family: $primary-font-family;
-$subHeader-text-color: $pewter-blue;
+$subHeader-text-color: $keppel;
 
-$contentOne-font-size: 16px;
+$subHeader-sm-font-size: 24px;
+
+$contentOne-font-size: 18px;
 $contentOne-font-weight: 700;
 $contentOne-font-family: $primary-font-family;
 
-$contentTwo-font-size: 12px;
+$contentTwo-font-size: 16px;
 $contentTwo-font-weight: 400;
 $contentTwo-font-family: $primary-font-family;
 $contentTwo-primary-text-color: $rich-black;
 $contentTwo-secondary-text-color: $cultured-white;
+
+$contentThree-font-size: 12px;
+$contentThree-font-weight: 400;
+$contentThree-font-family: $primary-font-family;
 
 // Input Styles
 $input-bg-color: $mint-cream;
