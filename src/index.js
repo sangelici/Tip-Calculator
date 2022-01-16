@@ -29,9 +29,11 @@ $(function () {
 
     $("#billAmount").on("blur", () => {
       $("#billAmount").val(bill);
-      bill == "0"
+      bill.slice(0, -3) == "0"
         ? ($("#billAmount").addClass("invalidValueError"),
-          $("#bill-error").show())
+          $("#bill-error").show(),
+          $("#submit-btn").addClass("disabled-btn"),
+          $("#submit-btn").attr("disabled", true))
         : ($("#billAmount").removeClass("invalidValueError"),
           $("#bill-error").hide());
     });
@@ -61,7 +63,9 @@ $(function () {
       $("#customTipInput").on("blur", () => {
         tipPercentage == "0"
           ? ($("#customTipInput").addClass("invalidValueError"),
-            $("#tip-error").show())
+            $("#tip-error").show(),
+            $("#submit-btn").addClass("disabled-btn"),
+            $("#submit-btn").attr("disabled", true))
           : ($("#customTipInput").removeClass("invalidValueError"),
             $("#tip-error").hide());
       });
@@ -76,7 +80,9 @@ $(function () {
     $("#numOfPeople").on("blur", () => {
       numOfPeople == "0"
         ? ($("#numOfPeople").addClass("invalidValueError"),
-          $("#people-error").show())
+          $("#people-error").show(),
+          $("#submit-btn").addClass("disabled-btn"),
+          $("#submit-btn").attr("disabled", true))
         : ($("#numOfPeople").removeClass("invalidValueError"),
           $("#people-error").hide());
     });
@@ -90,13 +96,9 @@ $(function () {
 
     tipTotal = calculateSplitTipAmt / numOfPeople;
     total = calculateSplitBillAmt + tipTotal;
-
-    $("input").attr("disabled", true);
-    $("input").addClass("disabled-input");
     $("#total-split").text("$" + total.toFixed(2));
     $("#total-tip-split").text("$" + tipTotal.toFixed(2));
     $("#total-bill-split").text("$" + calculateSplitBillAmt.toFixed(2));
-    $("#submit-btn").text("Reset");
   }
 
   function handleSelect() {
@@ -104,28 +106,21 @@ $(function () {
     $(this).addClass("selected");
   }
 
-  function handleSubmit() {
-    $("#submit-btn").text().trim() === "Calculate"
-      ? calculateTotals()
-      : handleReset();
-  }
-
   function handleReset() {
     bill = "";
     numOfPeople = "";
     tipPercentage = "";
-    $("input").removeAttr("disabled");
-    $("input").removeClass("disabled-input");
     $("#billAmount").val("");
     $("#numOfPeople").val("");
     $(".percent-amt").removeClass("selected");
     $(".custom-tip-btn").show();
     $(".custom-tip-input").hide();
-    $(".custom-tip-input").val("");
+    $("#customTipInput").val("");
     $("#total-split").text("$0.00");
     $("#total-tip-split").text("$0.00");
     $("#total-bill-split").text("$0.00");
-    $("#submit-btn").text("Calculate");
+    $("#submit-btn").addClass("disabled-btn");
+    $("#submit-btn").attr("disabled", true);
   }
 
   // Jquery Listeners
@@ -136,5 +131,8 @@ $(function () {
   $(".custom-tip-btn").show();
   $(".custom-tip-input").hide();
   $(".percent-amt").on("click", handleSelect);
-  $("#submit-btn").on("click", handleSubmit);
+  $("#submit-btn").addClass("disabled-btn");
+  $("#submit-btn").attr("disabled", true);
+  $("#submit-btn").on("click", calculateTotals);
+  $("#reset-btn").on("click", handleReset);
 });

@@ -67,7 +67,7 @@
               <input
                 aria-label="bill-amount"
                 id="billAmount"
-                type="text"
+                type="number"
                 class="form-control"
                 pattern="[0-9]"
                 placeholder="0"
@@ -147,7 +147,7 @@
                   Custom
                 </button>
               </div>
-              <div class="col-4 col-sm-4 mt-2 px-1 custom-tip-input">
+              <div class="col-6 col-sm-4 mt-2 px-1 custom-tip-input">
                 <input
                   aria-label="custom-tip-percentage"
                   id="customTipInput"
@@ -221,7 +221,7 @@
               </div>
             </div>
             <div class="row reset-wrapper">
-              <div class="col">
+              <div class="col-12">
                 <button
                   id="submit-btn"
                   type="button"
@@ -229,6 +229,15 @@
                   disabled
                 >
                   Calculate
+                </button>
+              </div>
+              <div class="col-12">
+                <button
+                  id="reset-btn"
+                  type="button"
+                  class="btn mt-2 w-100 result-btn disabled-btn"
+                >
+                  Reset
                 </button>
               </div>
             </div>
