@@ -23,9 +23,10 @@ Users should be able to:
 
 ### Screenshot
 
-![Tip Calculator](./images/app-screenshot.png)
-![Active State](./images/active-state-screenshot.png)
-![Error State](./images/error-state-screenshot.png)
+![Tip Calculator](./images/app-desktop-ss.png)
+![Active State](./images/active-state-desktop-ss.png)
+![Error State](./images/error-state-desktop-ss.png)
+![Mobile Responsive View](./images/mobile-screenshot.png)
 
 ### Links
 
